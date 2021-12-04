@@ -23,18 +23,22 @@ return deliveryOrders
 }
 
 
-function listItems(orderList){
+function listItems(order){
   var tempList = []
-  for (var i=0; i<orderList.length; i++){
-    tempList.push(orderList[i].item)
+  for (var i=0; i<order.length; i++){
+    tempList.push(order[i].item)
   }
   return tempList.join(", ")
 }
 
-function searchOrder() {
-  if (deliveryOrders.indexOf(orders) !== -1)
-  return ("The order is not in the list!"){
-    else (deliveryOrders.indexOf(orders) == >1)
-    return ("The order is in the list!")
+function searchOrder (order,orderItem){
+  var tempList = [];
+  for (var i=0; i<order.length; i++){
+    tempList.push(order[i].item)
   }
+  if (tempList.includes(orderItem)){
+  return true
+} else {
+  return false
+}
 }
