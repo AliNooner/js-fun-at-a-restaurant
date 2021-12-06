@@ -42,6 +42,9 @@ if (food.type === "breakfast" && typeRestaurant.menus.breakfast.includes(food) =
     return typeRestaurant.menus.dinner.push(food)
   }
 }
+// another way of doing it using bracket notation
+//typeOfRest.menus[dish.type].push(dish)
+
 
 // function removeMenuItem(createdRestaurant, menuItemRemoved, itemType){
 //
@@ -68,30 +71,27 @@ if (food.type === "breakfast" && typeRestaurant.menus.breakfast.includes(food) =
 
 
 
-function removeMenuItem(type, foodType, foodGroup){
-//   if (foodGroup === "breakfast") {
-//     for (var i=0; i<type.menus.breakfast.length; i++) {
-//       if (foodType === type.menus.breakfast[i].name) {
-//         type.menus.breakfast.splice(i,1)
-//       }
-//       return `No one is eating our ${foodType} - it has been removed from the ${foodType} menu!`
-//     }
-//     else (foodGroup === "lunch") {
-//       for (var i=0; i<type.menus.lunch.length; i++) {
-//         if (foodType === type.menus.lunch[i].name) {
-//           type.menus.lunch.splice(i,1)
-//         }
-//         return `No one is eating our ${foodType} - it has been removed from the ${foodType} menu!`
-//       }
-//       else (foodGroup === "dinner") {
-//         for (var i =0; i<type.menus.dinner.length; i++) {
-//           if (foodType === type.menus.dinner[i].name) {
-//             type.menus.dinner.splice(i,1)
-//           }
-//           return `No one is eating our ${foodType} - it has been removed from the ${foodType} menu!`
-        // }
+function removeMenuItem(typeRestaurant, foodType, foodGroup){
+  if (foodGroup === "breakfast") {
+    for (var i=0; i<typeRestaurant.menus.breakfast.length; i++) {
+      if (foodType === typeRestaurant.menus.breakfast[i].name) {
+        typeRestaurant.menus.breakfast.splice(i,1)
       }
-//     }
-//   }
-//
-// }
+      return `No one is eating our ${foodType} - it has been removed from the ${foodGroup} menu!`
+    }
+  } else if (foodGroup === "lunch") {
+      for (var i=0; i<typeRestaurant.menus.lunch.length; i++) {
+        if (foodType === typeRestaurant.menus.lunch[i].name) {
+          typeRestaurant.menus.lunch.splice(i,1)
+        }
+        return `No one is eating our ${foodType} - it has been removed from the ${foodGroup} menu!`
+    }
+  } else if (foodGroup === "dinner") {
+        for (var i =0; i<typeRestaurant.menus.dinner.length; i++) {
+          if (foodType === typeRestaurant.menus.dinner[i].name) {
+            typeRestaurant.menus.dinner.splice(i,1)
+    }
+          return `No one is eating our ${foodType} - it has been removed from the ${foodGroup} menu!`
+        }
+      }
+}
