@@ -6,11 +6,6 @@ module.exports = {
   removeMenuItem
 }
 
-// var menus = {
-// breakfast:,
-// lunch:,
-// dinner:
-// }
 
 function createRestaurant(name){
   return {
@@ -25,10 +20,6 @@ function createRestaurant(name){
 
 
 function addMenuItem(typeRestaurant, food){
-  // for (var i=0; i = typeRestaurant.length; i++)
-//
-   // return typeRestaurant.menus.lunch.push(food)
-// }
 
 if (food.type === "breakfast" && typeRestaurant.menus.breakfast.includes(food) === false) {
   return typeRestaurant.menus.breakfast.push(food)}
@@ -42,33 +33,6 @@ if (food.type === "breakfast" && typeRestaurant.menus.breakfast.includes(food) =
     return typeRestaurant.menus.dinner.push(food)
   }
 }
-// another way of doing it using bracket notation
-//typeOfRest.menus[dish.type].push(dish)
-
-
-// function removeMenuItem(createdRestaurant, menuItemRemoved, itemType){
-//
-// for (var i=0; i<createdRestaurant.menus.length; i++){
-//
-// if (createdRestaurant.menus.breakfast.inclues(menuItemRemoved)) {
-//   createdRestaurant.menus.breakfast.splice([i],1)
-// }
-// }
-// return `No one is eating our ${menuItemRemoved} - it has been removed from our ${itemType} menu`
-// }
-
-// fumction RemoveMenuItem(retaurant, food, menu){
-//   for (i=0; i<restaurant.menus.length; i++){
-//
-//     if (restaurant.menus.breakfast  === menu ){
-//       for (i=0; i<restaurant.menus.breakfast.length; i++){
-//         if (restaurant.menus.breakfast[i].name === food)
-//         restaurant.menus.breakfast.splice([i], 1)
-//       }
-//     }
-//   }
-// }
-
 
 
 function removeMenuItem(typeRestaurant, foodType, foodGroup){
