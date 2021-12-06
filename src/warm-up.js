@@ -128,4 +128,4 @@ var groceryStore = {
 
 grocerystore.location = ["Denver, Colorado"];
 
-console.log(groceryStore)
+console.log(groceryStore) 
